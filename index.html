@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bookshelf Loader</title>
+  <link rel="stylesheet" href="loader1.css">
+</head>
+<body>
+
+  <div class="loader-screen" id="loaderScreen" aria-live="polite">
+    <div class="loader-wrap">
+      <img
+        class="loader-brand-image"
+        src="title-logo-removebg-preview.png"
+        alt="Dr. Virendra Swarup Institute of Computer Studies logo"
+      >
+      <div class="progress-block" aria-hidden="true">
+        <div class="progress-track">
+          <div class="progress-bar" id="progressBar"></div>
+        </div>
+        <p class="loader-text">Loading <span id="progressValue">0%</span></p>
+      </div>
+    </div>
+  </div>
+
+<script>
+if (loaderScreen && progressBar && progressValue) {
+    window.addEventListener("load", () => {
+        let progress = 0;
+        const duration = window.innerWidth <= 640 ? 1800 : 2200;
+        const stepTime = 30;
+        const totalSteps = Math.ceil(duration / stepTime);
+        let currentStep = 0;
+
+        const hideLoader = () => {
+            loaderScreen.classList.add("hidden");
+        };
+
+        const timer = setInterval(() => {
+            currentStep += 1;
+            progress = Math.min(100, Math.round((currentStep / totalSteps) * 100));
+            progressBar.style.width = `${progress}%`;
+            progressValue.textContent = `${progress}%`;
+
+            if (progress >= 100) {
+                clearInterval(timer);
+                setTimeout(hideLoader, 160);
+            }
+        }, stepTime);
+    });
+}
+
+</script>
+</body>
+</html>
