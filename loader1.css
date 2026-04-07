@@ -83,38 +83,41 @@
   }
 }
 
-/* 📱 Mobile Optimization */
 @media (max-width: 640px) {
   .loader-wrap {
-    gap: 30px;
+    gap: 34px; /* more breathing space */
   }
 
   .loader-brand-image {
-    width: 270px;   /* slightly bigger than before */
-    max-width: 95%;
+    width: 300px;      /* 🔥 bigger logo */
+    max-width: 100%;
   }
 
   .progress-block {
-    max-width: 290px;
+    max-width: 320px;  /* wider loader */
   }
 
   .progress-track {
-    height: 10px;
+    height: 12px;      /* thicker bar = better visibility */
   }
 
   .loader-text {
-    font-size: 0.9rem;
-    letter-spacing: 1.2px;
+    font-size: 1rem;   /* slightly bigger text */
+    letter-spacing: 1.4px;
   }
 }
 
-/* 📱 Small Phones */
+/* Small phones */
 @media (max-width: 420px) {
   .loader-brand-image {
-    width: 250px;
+    width: 270px;  /* still big but safe */
   }
 
   .progress-block {
-    max-width: 270px;
+    max-width: 300px;
+  }
+
+  .progress-track {
+    height: 11px;
   }
 }
