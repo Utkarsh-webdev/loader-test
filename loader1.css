@@ -85,39 +85,40 @@
 
 @media (max-width: 640px) {
   .loader-wrap {
-    gap: 34px; /* more breathing space */
+    gap: 40px;              /* more space = bigger feel */
+    transform: scale(1.15); /* 🔥 main trick (makes everything bigger) */
   }
 
   .loader-brand-image {
-    width: 300px;      /* 🔥 bigger logo */
+    width: 320px;           /* BIG logo */
     max-width: 100%;
   }
 
   .progress-block {
-    max-width: 320px;  /* wider loader */
+    max-width: 340px;       /* bigger loader width */
   }
 
   .progress-track {
-    height: 12px;      /* thicker bar = better visibility */
+    height: 14px;           /* thick bar = strong visibility */
   }
 
   .loader-text {
-    font-size: 1rem;   /* slightly bigger text */
-    letter-spacing: 1.4px;
+    font-size: 1.05rem;
+    letter-spacing: 1.5px;
   }
 }
 
 /* Small phones */
 @media (max-width: 420px) {
+  .loader-wrap {
+    transform: scale(1.1);  /* slightly reduced but still big */
+  }
+
   .loader-brand-image {
-    width: 270px;  /* still big but safe */
+    width: 300px;
   }
 
   .progress-block {
-    max-width: 300px;
-  }
-
-  .progress-track {
-    height: 11px;
+    max-width: 320px;
   }
 }
