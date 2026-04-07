@@ -3,7 +3,6 @@
 
 .loader-screen {
   position: fixed;
-  /* inset: 0 using dvh for perfect mobile viewport handling */
   top: 0;
   left: 0;
   width: 100%;
@@ -28,30 +27,27 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 48px; /* Increased gap for better hierarchy */
+  gap: 48px;
 }
 
-/* Logo - Made significantly bigger for iPhone 14 Pro */
 .loader-brand-image {
   width: 320px; 
   max-width: 95%;
   height: auto;
   object-fit: contain;
-  /* Enhanced shadow for a 3D lift effect */
   filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.08));
   animation: logoEntrance 0.9s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-/* Progress Block */
 .progress-block {
   width: 100%;
-  max-width: 320px; /* Wider bar */
+  max-width: 320px; 
   text-align: center;
 }
 
 .progress-track {
   width: 100%;
-  height: 16px; /* Thicker, more "app-like" bar */
+  height: 16px;
   background: #f0f4f9;
   border-radius: 20px;
   overflow: hidden;
@@ -64,14 +60,12 @@
   background: linear-gradient(90deg, #1e3a8a, #3b82f6, #60a5fa);
   border-radius: 20px;
   transition: width 0.3s cubic-bezier(0.1, 0.5, 0.5, 1);
-  /* Added a subtle glow to the bar */
   box-shadow: 0 0 12px rgba(59, 130, 246, 0.4);
 }
 
-/* Text */
 .loader-text {
   font-family: 'Poppins', sans-serif;
-  font-size: 1.1rem; /* Bigger font */
+  font-size: 1.1rem; 
   font-weight: 600;
   color: #1e3a8a;
   text-transform: uppercase;
@@ -80,21 +74,20 @@
 }
 
 #progressValue {
-    font-variant-numeric: tabular-nums; /* Prevents text jumping */
+    font-variant-numeric: tabular-nums; 
 }
 
-/* Specific optimizations for iPhone 14 Pro / High-end Mobiles */
 @media (max-width: 430px) {
   .loader-wrap {
-    transform: scale(1.1); /* General scale boost */
+    transform: scale(1.1); 
   }
 
   .loader-brand-image {
-    width: 340px; /* Pushing the limit of the screen width */
+    width: 340px;
   }
 
   .progress-track {
-    height: 18px; /* High visibility thickness */
+    height: 18px; 
   }
 
   .loader-text {
@@ -102,7 +95,7 @@
   }
 }
 
-/* Entrance Animation */
+
 @keyframes logoEntrance {
   from {
     opacity: 0;
